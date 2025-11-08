@@ -2,6 +2,7 @@
 from flask import Flask, flash, render_template, request, redirect, url_for, abort, jsonify
 from flask_migrate import Migrate
 from flask_sqlalchemy import SQLAlchemy
+from extensions import db, migrate, init_app
 from flask_login import LoginManager, login_user, login_required, logout_user, current_user
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_jwt_extended import JWTManager, create_access_token, jwt_required, get_jwt
@@ -29,6 +30,7 @@ app.config["JWT_SECRET_KEY"] = "clavesecretaxd"
 app.config["JWT_ACCESS_TOKEN_EXPIRES"] = timedelta(hours=24)
 
 # Inicializamos extensiones
+init_app(app)
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 jwt = JWTManager(app)
