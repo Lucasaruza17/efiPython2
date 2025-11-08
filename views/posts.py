@@ -1,7 +1,7 @@
 from flask.views import MethodView
 from flask import jsonify, request
-from services.post_service import PostService
-from schemas import PostSchema
+from ..services.post_service import PostService
+from ..schemas import PostSchema
 from flask_jwt_extended import jwt_required
 
 post_schema = PostSchema()

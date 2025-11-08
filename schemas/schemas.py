@@ -1,5 +1,5 @@
 from marshmallow import Schema, fields
-from models import User, UserCredentials, Post, Comentario, Categoria
+from ..models.models import User, UserCredentials, Post, Comentario, Categoria
 
 
 #User

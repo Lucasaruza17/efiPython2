@@ -1,6 +1,6 @@
 from flask.views import MethodView
 from flask import jsonify, request
-from services.comentario_service import ComentarioService
+from ..services.comentario_service import ComentarioService
 from schemas import ComentarioSchema
 from flask_jwt_extended import jwt_required
 

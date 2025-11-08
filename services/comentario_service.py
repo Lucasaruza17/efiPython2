@@ -1,5 +1,5 @@
-from app import db
-from models import Comentario
+from ..extensions import db
+from ..models import Comentario
 
 class ComentarioService:
     @staticmethod
