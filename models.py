@@ -1,5 +1,5 @@
 #Mateo Gonzalez y Lucas Aruza 
-from app import db  # Importa la instancia de la base de datos (MySQL) desde la aplicación principal
+from extensions import db
 from flask_login import UserMixin  # Clase auxiliar para integrar el modelo de usuario con Flask-Login
 from werkzeug.security import generate_password_hash, check_password_hash
 from datetime import datetime
