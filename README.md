@@ -192,7 +192,6 @@ Tecnologías utilizadas
 | Admin     | admin@mail.com | admin1234    |
 | Moderador | mod@mail.com   | mod1234      |
 | Usuario   | user@mail.com  | user1234     |
-Para crear estos usuarios:
 
 1.  **Regístralos** usando `POST /api/register` (con Thunder Client).
     * `{"username": "admin_user", "email": "admin@mail.com", "password": "admin1234"}`
