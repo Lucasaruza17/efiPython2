@@ -25,7 +25,7 @@ Basándome en todo lo que hemos construido en tu proyecto (efiPytohn2), he cread
 Simplemente copia todo el bloque de código de abajo y pégalo en el archivo README.md de tu repositorio de GitHub.
 Markdown
 
-# API REST con Flask - EFI Python (efiPytohn2)
+# API REST con Flask - EFI Python (efiPython2)
 
 Repositorio para la **Evaluación Final Integradora (EFI)** de la materia **Programación Python I**, creado por Lucas Aruza y Mateo Gonzalez.
 
@@ -73,8 +73,8 @@ Repositorio para la **Evaluación Final Integradora (EFI)** de la materia **Prog
 ### 1️⃣ Clonar el repositorio
 
 ```bash
-git clone [https://github.com/Lucasaruza17/efiPytohn2.git](https://github.com/Lucasaruza17/efiPytohn2.git)
-cd efiPytohn2
+git clone [https://github.com/Lucasaruza17/efiPython2.git](https://github.com/Lucasaruza17/efiPython2.git)
+cd efiPython2
 ```
 ---
 
