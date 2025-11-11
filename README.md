@@ -6,14 +6,14 @@ Repositorio para la **Evaluación Final Integradora (EFI)** de la materia **Prog
 
 ## Resumen de funcionalidades
 
--   [x] **Arquitectura limpia** (Services + Repositories)
--   [x] **Autenticación** con Flask-JWT-Extended
--   [x] **Control de acceso** basado en roles (Admin, Moderator, User)
--   [x] **CRUDs completos** (Usuarios, Posts, Comentarios, Categorías)
--   [x] **Eliminado lógico** (desactivación de usuarios)
--   [x] **Endpoint de estadísticas** (`/api/stats`)
--   [x] **Protección de rutas** según rol (Decoradores personalizados)
--   [x] **Código modular**, escalable y mantenible
+-   ✅ **Arquitectura limpia** (Services + Repositories)
+-   ✅ **Autenticación** con Flask-JWT-Extended
+-   ✅ **Control de acceso** basado en roles (Admin, Moderator, User)
+-   ✅ **CRUDs completos** (Usuarios, Posts, Comentarios, Categorías)
+-   ✅ **Eliminado lógico** (desactivación de usuarios)
+-   ✅ **Endpoint de estadísticas** (`/api/stats`)
+-   ✅ **Protección de rutas** según rol (Decoradores personalizados)
+-   ✅ **Código modular**, escalable y mantenible
 
 ---
 
@@ -33,14 +33,14 @@ Repositorio para la **Evaluación Final Integradora (EFI)** de la materia **Prog
 
 ## Resumen de funcionalidades
 
--   [x] **Arquitectura limpia** (Services + Repositories)
--   [x] **Autenticación** con Flask-JWT-Extended
--   [x] **Control de acceso** basado en roles (Admin, Moderator, User)
--   [x] **CRUDs completos** (Usuarios, Posts, Comentarios, Categorías)
--   [x] **Eliminado lógico** (desactivación de usuarios)
--   [x] **Endpoint de estadísticas** (`/api/stats`)
--   [x] **Protección de rutas** según rol (Decoradores personalizados)
--   [x] **Código modular**, escalable y mantenible
+-    ✅ **Arquitectura limpia** (Services + Repositories)
+-    ✅ **Autenticación** con Flask-JWT-Extended
+-    ✅ **Control de acceso** basado en roles (Admin, Moderator, User)
+-    ✅ **CRUDs completos** (Usuarios, Posts, Comentarios, Categorías)
+-    ✅ **Eliminado lógico** (desactivación de usuarios)
+-    ✅ **Endpoint de estadísticas** (`/api/stats`)
+-    ✅ **Protección de rutas** según rol (Decoradores personalizados)
+-    ✅ **Código modular**, escalable y mantenible
 
 ---
 
@@ -219,15 +219,22 @@ Tecnologías utilizadas
 | Admin     | admin@mail.com | admin1234    |
 | Moderador | mod@mail.com   | mod1234      |
 | Usuario   | user@mail.com  | user1234     |
+Para crear estos usuarios:
 
-## Regístralos usando POST /api/register (con Thunder Client).
+1.  **Regístralos** usando `POST /api/register` (con Thunder Client).
+    * `{"username": "admin_user", "email": "admin@mail.com", "password": "admin123"}`
+    * `{"username": "mod_user", "email": "mod@mail.com", "password": "mod123"}`
+    * `{"username": "user_user", "email": "user@mail.com", "password": "user123"}`
 
-## Asigna los roles en tu base de datos (ej. con phpMyAdmin)
-```SQL
-USE efipythonMyL;
-UPDATE user SET role = 'admin' WHERE email = 'admin@mail.com';
-UPDATE user SET role = 'moderator' WHERE email = 'mod@mail.com';
-```
+2.  **Asigna los roles en MySQL:**
+    Por defecto, todos se crearán como "user". Conéctate a tu base de datos y ejecuta los siguientes comandos SQL para actualizar sus roles:
+
+    ```sql
+    USE efipythonMyL;
+    UPDATE user SET role = 'admin' WHERE email = 'admin@mail.com';
+    UPDATE user SET role = 'moderator' WHERE email = 'mod@mail.com';
+    ```
+
 ## Ejemplos de peticiones (Body)
 
 ### Registro de usuario
