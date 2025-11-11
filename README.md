@@ -1,4 +1,4 @@
-# API REST con Flask - EFI Python (efiPytohn2)
+# API REST con Flask - EFI Python (efiPython2)
 
 Repositorio para la **Evaluación Final Integradora (EFI)** de la materia **Programación Python I**, creado por Lucas Aruza y Mateo Gonzalez.
 
