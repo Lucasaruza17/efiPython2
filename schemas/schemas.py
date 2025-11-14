@@ -27,7 +27,6 @@ class CategoriaSchema(Schema):
 #Posteo
 class PostSchema(Schema):
     id = fields.Int(dump_only=True)
-    category_id = fields.Int(required=True)
     titulo = fields.Str(required=True)
     contenido = fields.Str(required=True)
     created_at = fields.DateTime()

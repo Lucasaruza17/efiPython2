@@ -24,21 +24,14 @@ class PostAPI(MethodView):
     @jwt_required()
     def post(self, post_id=None):
         data = request.get_json()
-        current_user_id = get_jwt_identity()
-
+        current_user_id = get_jwt_identity() #obtenemo el id del token
+        
         titulo = data.get("titulo")
         contenido = data.get("contenido")
-
-        categorias_input = data.get("categorias")
-        if isinstance(categorias_input, str):
-            categorias = [categorias_input]
-        elif isinstance(categorias_input, list):
-            categorias = categorias_input
-        else:
-            categorias = []
-
+        categorias = data.get("categorias", [])
+        
+        #se usa el id del token
         nuevo_post = PostService.crear_post(titulo, contenido, current_user_id, categorias)
-
         return jsonify(post_schema.dump(nuevo_post)), 201
 
     @jwt_required()

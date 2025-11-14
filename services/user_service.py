@@ -5,8 +5,7 @@ from werkzeug.security import generate_password_hash
 class UserService:
     @staticmethod
     def crear_usuario(username, email, password):
-        # *** CAMBIO AQUÍ: Añadir el rol por defecto ***
-        nuevo_usuario = User(username=username, email=email, role='user') 
+        nuevo_usuario = User(username=username, email=email)
         db.session.add(nuevo_usuario)
         db.session.commit()
 
